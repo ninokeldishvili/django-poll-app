@@ -1,0 +1,35 @@
+1. Activate the virtual environment
+
+You creat it with
+py -m venv project-name
+
+but creating it doesn't activate it. In Command Prompt, run:
+
+project-name\Scripts\activate.bat
+
+(If you're using PowerShell instead of cmd, use project-name\Scripts\Activate.ps1 instead.)
+
+2. Confirm it's active
+
+Once activated, your prompt should change to show the environment name in parentheses, like:
+
+(project-name) C:\your\path>
+
+That's the signal it's active — if you don't see that prefix, it isn't active.
+
+3. Then install Django
+
+py -m pip install Django
+
+or once the venv is active, you can usually just use pip instead of py -m pip:
+
+pip install Django
+
+A couple of notes:
+
+Run the activate command from the same folder where project-name lives (i.e., don't cd into project-name first — activate it from one level up, pointing into project-name\Scripts\).
+If PowerShell gives you an error about scripts being disabled when you try to activate, that's a script-execution policy issue — let me know if you hit that and I can walk you through it.
+
+
+Run server:
+py manage.py runserver
